@@ -7,6 +7,8 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloRevista
         public int id;
         public string titulo;
         public int ano;
+        public int edicao;
+        public string colecao;
         public Caixa caixa;
     }
 }

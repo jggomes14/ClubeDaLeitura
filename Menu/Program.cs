@@ -1,41 +1,11 @@
-﻿using ClubeDaLeitura.ConsoleApp.ModuloAmigo;
-using ClubeDaLeitura.ConsoleApp.ModuloCaixa;
-using ClubeDaLeitura.ConsoleApp.ModuloEmprestimo;
-using ClubeDaLeitura.ConsoleApp.ModuloRevista;
+﻿using System.Collections;
 
-namespace ClubeDaLeitura.ConsoleApp
+namespace Menu
 {
-    // modelo tres camadas :
-
-    /* Apresentação
-     * 
-     *  Telas:
-     *      -TelaCaixa
-     */
-
-    /* Dados
-     * 
-     *  Repositórios:
-     *  
-     *      -RepositorioCaixa
-     */
-
-    /* Negocio
-     * 
-     *  Entidades:
-     *  
-     *      -Caixa
-     */
-
     internal class Program
     {
         static void Main(string[] args)
         {
-            RepositorioRevista repositorioRevista = new RepositorioRevista();
-            RepositorioCaixa repositorioCaixa = new RepositorioCaixa();
-            RepositorioAmigo repositorioAmigo = new RepositorioAmigo(); 
-            RepositorioEmprestimo repositorioEmprestimo = new RepositorioEmprestimo();
-            
             int opcao;
             do
             {
@@ -49,7 +19,7 @@ namespace ClubeDaLeitura.ConsoleApp
                 Console.Write("Digite a opção desejada: ");
                 opcao = int.Parse(Console.ReadLine());
 
-
+                
 
                 switch (opcao)
                 {
@@ -83,7 +53,7 @@ namespace ClubeDaLeitura.ConsoleApp
                                 int opcaodeselecao = int.Parse(Console.ReadLine());
                                 revista.caixa = repositorioCaixa.SelecionarPorId(opcaodeselecao);
 
-                               
+                                RepositorioRevista repositorioRevista = new RepositorioRevista();
 
                                 repositorioRevista.Inserir(revista);
 
@@ -91,7 +61,7 @@ namespace ClubeDaLeitura.ConsoleApp
                                 break;
 
 
-
+                            
                             case 2:
                                 TelaRevista telaRevista = new TelaRevista();
                                 telaRevista.repositorio = repositorioRevista;
@@ -101,14 +71,14 @@ namespace ClubeDaLeitura.ConsoleApp
                                 Console.ReadKey();
 
                                 break;
-
+                            
                             case 3:
                                 Console.WriteLine("Insira o Id da Revista que você quer editar");
                                 int idi = int.Parse(Console.ReadLine());
                                 repositorioRevista.EditarRevista(idi);
 
                                 break;
-
+                              
                             case 4:
                                 Console.WriteLine("Insira o ID da Revista que você quer excluir");
                                 int id = int.Parse(Console.ReadLine());
@@ -167,21 +137,14 @@ namespace ClubeDaLeitura.ConsoleApp
                         Console.WriteLine("Escolha uma opção:");
                         Console.WriteLine("1 - Adicionar Caixa");
                         Console.WriteLine("2 - Remover Caixa");
-                        Console.WriteLine("3 - Lista de Caixa");
+                        Console.WriteLine("3 - Verificar Etiqueta");
+                        Console.WriteLine("4 - Obter Caixa");
                         Console.WriteLine("0 - Voltar");
 
                         int opcaoCaixa = int.Parse(Console.ReadLine());
                         switch (opcaoCaixa)
                         {
                             case 1:
-                                Caixa caixa = new Caixa();
-                                Console.WriteLine("Insira o id da Caixa");
-                                caixa.id = int.Parse(Console.ReadLine());
-                                Console.WriteLine("Insira a Etiqueta da Caixa");
-                                caixa.etiqueta = Console.ReadLine();
-                                Console.WriteLine("Qual a Cor da Caixa?");
-                                caixa.cor = Console.ReadLine();
-                                repositorioCaixa.Inserir(caixa);
                                 break;
 
                             case 2:
@@ -189,10 +152,10 @@ namespace ClubeDaLeitura.ConsoleApp
                                 break;
 
                             case 3:
-
                                 break;
 
-                           
+                            case 4:
+                                break;
 
                             case 0:
                                 Console.WriteLine("Voltando ao Menu Principal");
@@ -249,7 +212,5 @@ namespace ClubeDaLeitura.ConsoleApp
                 }
             } while (opcao != 0);
         }
-
-
     }
 }

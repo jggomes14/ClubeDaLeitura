@@ -1,0 +1,15 @@
+C:\Users\jgabr\Source\Repos\ClubeDaLeitura-2023\ClubeDaLeitura.ConsoleApp\bin\Debug\net6.0\ClubeDaLeitura.ConsoleApp.exe
+C:\Users\jgabr\Source\Repos\ClubeDaLeitura-2023\ClubeDaLeitura.ConsoleApp\bin\Debug\net6.0\ClubeDaLeitura.ConsoleApp.deps.json
+C:\Users\jgabr\Source\Repos\ClubeDaLeitura-2023\ClubeDaLeitura.ConsoleApp\bin\Debug\net6.0\ClubeDaLeitura.ConsoleApp.runtimeconfig.json
+C:\Users\jgabr\Source\Repos\ClubeDaLeitura-2023\ClubeDaLeitura.ConsoleApp\bin\Debug\net6.0\ClubeDaLeitura.ConsoleApp.dll
+C:\Users\jgabr\Source\Repos\ClubeDaLeitura-2023\ClubeDaLeitura.ConsoleApp\bin\Debug\net6.0\ClubeDaLeitura.ConsoleApp.pdb
+C:\Users\jgabr\Source\Repos\ClubeDaLeitura-2023\ClubeDaLeitura.ConsoleApp\obj\Debug\net6.0\ClubeDaLeitura.ConsoleApp.csproj.AssemblyReference.cache
+C:\Users\jgabr\Source\Repos\ClubeDaLeitura-2023\ClubeDaLeitura.ConsoleApp\obj\Debug\net6.0\ClubeDaLeitura.ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jgabr\Source\Repos\ClubeDaLeitura-2023\ClubeDaLeitura.ConsoleApp\obj\Debug\net6.0\ClubeDaLeitura.ConsoleApp.AssemblyInfoInputs.cache
+C:\Users\jgabr\Source\Repos\ClubeDaLeitura-2023\ClubeDaLeitura.ConsoleApp\obj\Debug\net6.0\ClubeDaLeitura.ConsoleApp.AssemblyInfo.cs
+C:\Users\jgabr\Source\Repos\ClubeDaLeitura-2023\ClubeDaLeitura.ConsoleApp\obj\Debug\net6.0\ClubeDaLeitura.ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\jgabr\Source\Repos\ClubeDaLeitura-2023\ClubeDaLeitura.ConsoleApp\obj\Debug\net6.0\ClubeDaLeitura.ConsoleApp.dll
+C:\Users\jgabr\Source\Repos\ClubeDaLeitura-2023\ClubeDaLeitura.ConsoleApp\obj\Debug\net6.0\refint\ClubeDaLeitura.ConsoleApp.dll
+C:\Users\jgabr\Source\Repos\ClubeDaLeitura-2023\ClubeDaLeitura.ConsoleApp\obj\Debug\net6.0\ClubeDaLeitura.ConsoleApp.pdb
+C:\Users\jgabr\Source\Repos\ClubeDaLeitura-2023\ClubeDaLeitura.ConsoleApp\obj\Debug\net6.0\ClubeDaLeitura.ConsoleApp.genruntimeconfig.cache
+C:\Users\jgabr\Source\Repos\ClubeDaLeitura-2023\ClubeDaLeitura.ConsoleApp\obj\Debug\net6.0\ref\ClubeDaLeitura.ConsoleApp.dll

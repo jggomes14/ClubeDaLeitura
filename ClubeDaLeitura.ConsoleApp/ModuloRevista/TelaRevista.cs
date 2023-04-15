@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using ClubeDaLeitura.ConsoleApp.ModuloCaixa;
+using System.Collections;
 
 namespace ClubeDaLeitura.ConsoleApp.ModuloRevista
 {
@@ -10,10 +11,18 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloRevista
         {
             ArrayList revistas = repositorio.SelecionarTodos();
 
+            if (revistas.Count == 0)
+            {
+               Console.WriteLine("Não existem revistas cadastradas.");
+            }
+
             foreach (Revista r in revistas)
             {
-                Console.WriteLine(r.id + ", " + r.titulo + ", " + r.caixa.etiqueta);
+                Console.WriteLine(r.id + ", " + r.titulo + ", " + r.edicao + ", " + r.ano + ", " + r.colecao + ", " + r.caixa.etiqueta);
             }
         }
-    }   
+
+
+
+    }
 }

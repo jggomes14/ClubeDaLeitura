@@ -37,5 +37,39 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloCaixa
 
             return caixa;
         }
+        public void EditarCaixa(int id)
+        {
+            Caixa caixa = SelecionarPorId(id);
+
+            if (caixa != null)
+            {
+                Console.WriteLine("Editar caixa: " + caixa.etiqueta);
+                Console.WriteLine("Digite a nova etiqueta da caixa:");
+                caixa.etiqueta = Console.ReadLine();
+                Console.WriteLine("Digite a nova cor da caixa:");
+                caixa.cor = Console.ReadLine();
+                Console.WriteLine("Caixa editada com sucesso!");
+            }
+            else
+            {
+                Console.WriteLine("Caixa não encontrada!");
+            }
+        }
+        public void ExcluirCaixa(int id)
+        {
+            Caixa caixa = SelecionarPorId(id);
+
+            if (caixa != null)
+            {
+                listaRegistros.Remove(caixa);
+                Console.WriteLine("Caixa removida com sucesso!");
+            }
+            else
+            {
+                Console.WriteLine("Caixa não encontrada!");
+            }
+        }
+
+
     }
 }
