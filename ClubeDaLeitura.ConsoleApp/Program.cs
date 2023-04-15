@@ -40,13 +40,19 @@ namespace ClubeDaLeitura.ConsoleApp
             do
             {
                 Console.Clear();
-                Console.WriteLine("----- Menu de opções -----");
-                Console.WriteLine("1 - Gerenciar Revistas");
-                Console.WriteLine("2 - Gerenciar Amigos");
-                Console.WriteLine("3 - Gerenciar Caixas");
-                Console.WriteLine("4 - Gerenciar Empréstimos");
-                Console.WriteLine("0 - Sair do programa");
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+
+                Console.WriteLine("╔══════════════════════════════════╗");
+                Console.WriteLine("║         MENU PRINCIPAL           ║");
+                Console.WriteLine("╠══════════════════════════════════╣");
+                Console.WriteLine("║ 1.  Gerenciar Revistas           ║");
+                Console.WriteLine("║ 2.  Gerenciar Amigos             ║");
+                Console.WriteLine("║ 3.  Gerenciar Caixas             ║");
+                Console.WriteLine("║ 4.  Gerenciar Empréstimos        ║");
+                Console.WriteLine("║ 0.  Sair do programa             ║");
+                Console.WriteLine("╚══════════════════════════════════╝");
                 Console.Write("Digite a opção desejada: ");
+
                 opcao = int.Parse(Console.ReadLine());
 
 
@@ -54,13 +60,20 @@ namespace ClubeDaLeitura.ConsoleApp
                 switch (opcao)
                 {
                     case 1:
-                        Console.WriteLine("----- Gerenciamento de Revistas -----");
-                        Console.WriteLine("1 - Cadastrar Revista");
-                        Console.WriteLine("2 - Visualizar Revistas");
-                        Console.WriteLine("3 - Editar Revista");
-                        Console.WriteLine("4 - Excluir Revista");
-                        Console.WriteLine("0 - Voltar ao menu principal");
+                        Console.Clear();
+                        Console.ForegroundColor = ConsoleColor.DarkBlue;
+
+                        Console.WriteLine("╔══════════════════════════════════╗");
+                        Console.WriteLine("║      GERENCIAMENTO DE REVISTAS   ║");
+                        Console.WriteLine("╠══════════════════════════════════╣");
+                        Console.WriteLine("║ 1. Cadastrar Revista             ║");
+                        Console.WriteLine("║ 2. Visualizar Revistas           ║");
+                        Console.WriteLine("║ 3. Editar Revista                ║");
+                        Console.WriteLine("║ 4. Excluir Revista               ║");
+                        Console.WriteLine("║ 0. Voltar ao menu principal      ║");
+                        Console.WriteLine("╚══════════════════════════════════╝");
                         Console.Write("Digite a opção desejada: ");
+
                         int opcaoRevistas = int.Parse(Console.ReadLine());
 
                         switch (opcaoRevistas)
@@ -130,14 +143,20 @@ namespace ClubeDaLeitura.ConsoleApp
                         }
                         break;
                     case 2:
-                        Console.WriteLine("Gerenciamento de Amigos:");
-                        Console.WriteLine("1 - Cadastrar amigo");
-                        Console.WriteLine("2 - Remover amigo");
-                        Console.WriteLine("3 - Consultar amigo");
-                        Console.WriteLine("4 - Editar Amigo");
-                        Console.WriteLine("0 - Voltar");
+                        Console.Clear();
+                        Console.ForegroundColor = ConsoleColor.DarkGreen;
 
-                        Console.Write("Digite uma opção: ");
+                        Console.WriteLine("╔══════════════════════════════════╗");
+                        Console.WriteLine("║      GERENCIAMENTO DE AMIGOS     ║");
+                        Console.WriteLine("╠══════════════════════════════════╣");
+                        Console.WriteLine("║ 1. Cadastrar amigo               ║");
+                        Console.WriteLine("║ 2. Remover amigo                 ║");
+                        Console.WriteLine("║ 3. Consultar amigo               ║");
+                        Console.WriteLine("║ 4. Editar amigo                  ║");
+                        Console.WriteLine("║ 0. Voltar ao menu principal      ║");
+                        Console.WriteLine("╚══════════════════════════════════╝");
+                        Console.Write("Digite a opção desejada: ");
+
                         int opcaoAmigo = int.Parse(Console.ReadLine());
                         switch (opcaoAmigo)
                         {
@@ -191,12 +210,19 @@ namespace ClubeDaLeitura.ConsoleApp
                         }
                         break;
                     case 3:
-                        Console.WriteLine("Escolha uma opção:");
-                        Console.WriteLine("1 - Adicionar Caixa");
-                        Console.WriteLine("2 - Remover Caixa");
-                        Console.WriteLine("3 - Editar Caixa");
-                        Console.WriteLine("4 - Lista de Caixa");
-                        Console.WriteLine("0 - Voltar");
+                        Console.Clear();
+                        Console.ForegroundColor = ConsoleColor.DarkMagenta;
+
+                        Console.WriteLine("╔══════════════════════════════════════╗");
+                        Console.WriteLine("║        GERENCIAMENTO DE CAIXAS       ║");
+                        Console.WriteLine("╠══════════════════════════════════════╣");
+                        Console.WriteLine("║ 1 - Adicionar Caixa                  ║");
+                        Console.WriteLine("║ 2 - Remover Caixa                    ║");
+                        Console.WriteLine("║ 3 - Editar Caixa                     ║");
+                        Console.WriteLine("║ 4 - Lista de Caixa                   ║");
+                        Console.WriteLine("║ 0 - Voltar ao menu principal         ║");
+                        Console.WriteLine("╚══════════════════════════════════════╝");
+                        Console.Write("Digite a opção desejada: ");
 
                         int opcaoCaixa = int.Parse(Console.ReadLine());
                         switch (opcaoCaixa)
@@ -250,11 +276,21 @@ namespace ClubeDaLeitura.ConsoleApp
                         }
                         break;
                     case 4:
-                        Console.WriteLine("Escolha uma opção:");
-                        Console.WriteLine("1 - Cadastrar Empréstimo");
-                        Console.WriteLine("2 - Devolver Empréstimo");
-                        Console.WriteLine("3 - Consultar Empréstimo");
-                        Console.WriteLine("0 - Voltar");
+                        Console.Clear();
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
+
+                        Console.WriteLine("╔══════════════════════════════════════════╗");
+                        Console.WriteLine("║      GERENCIAMENTO DE EMPRÉSTIMOS        ║");
+                        Console.WriteLine("╠══════════════════════════════════════════╣");
+                        Console.WriteLine("║ 1. Cadastrar Empréstimo                  ║");
+                        Console.WriteLine("║ 2. Remover Empréstimo                    ║");
+                        Console.WriteLine("║ 3. Consultar Empréstimo                  ║");
+                        Console.WriteLine("║ 4. Devolver Empréstimo                   ║");
+                        Console.WriteLine("║ 5. Editar Empréstimo                     ║");
+                        Console.WriteLine("║ 0. Voltar ao menu principal              ║");
+                        Console.WriteLine("╚══════════════════════════════════════════╝");
+                        Console.Write("Digite a opção desejada: ");
+
 
                         int opcaoEmprestimo = int.Parse(Console.ReadLine());
 
@@ -271,6 +307,8 @@ namespace ClubeDaLeitura.ConsoleApp
                                 break;
 
                             case 4:
+                                break;
+                            case 5:
                                 break;
 
                             case 0:
