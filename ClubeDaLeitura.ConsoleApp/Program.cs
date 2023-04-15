@@ -134,23 +134,50 @@ namespace ClubeDaLeitura.ConsoleApp
                         Console.WriteLine("1 - Cadastrar amigo");
                         Console.WriteLine("2 - Remover amigo");
                         Console.WriteLine("3 - Consultar amigo");
-                        Console.WriteLine("4 - Voltar");
+                        Console.WriteLine("4 - Editar Amigo");
+                        Console.WriteLine("0 - Voltar");
 
                         Console.Write("Digite uma opção: ");
                         int opcaoAmigo = int.Parse(Console.ReadLine());
                         switch (opcaoAmigo)
                         {
                             case 1:
+                                Amigo amigo = new Amigo();
+                                Console.WriteLine("Insira o id do Amigo");
+                                amigo.id = int.Parse(Console.ReadLine());
+                                Console.WriteLine("Qual o Nome do Amigo?");
+                                amigo.nome = Console.ReadLine();
+                                Console.WriteLine("Qual o Nome do Responsavel do Amigo?");
+                                amigo.nomeResponsavel = Console.ReadLine();
+                                Console.WriteLine("Qual o número de Telefone do Amigo?");
+                                amigo.telefone = Console.ReadLine();
+                                Console.WriteLine("Qual o Endereço do Amigo?");
+                                amigo.endereco = Console.ReadLine();
+                                repositorioAmigo.Inserir(amigo);
                                 break;
 
                             case 2:
+                                Console.WriteLine("Insira o ID do Amigo que você quer excluir");
+                                int id = int.Parse(Console.ReadLine());
+                                repositorioAmigo.ExcluirAmigo(id);
+                                Console.ReadKey();
 
                                 break;
 
                             case 3:
+                                Console.WriteLine("Insira o Id do Amigo que você quer editar");
+                                int idi = int.Parse(Console.ReadLine());
+                                repositorioAmigo.EditarAmigo(idi);
+                                Console.ReadKey();
                                 break;
 
                             case 4:
+                                TelaAmigo telaAmigo = new TelaAmigo();
+                                telaAmigo.repositorio = repositorioAmigo;
+                                telaAmigo.MostrarAmigos();
+                                Console.ReadKey();
+
+
                                 break;
 
                             case 0:
@@ -167,7 +194,8 @@ namespace ClubeDaLeitura.ConsoleApp
                         Console.WriteLine("Escolha uma opção:");
                         Console.WriteLine("1 - Adicionar Caixa");
                         Console.WriteLine("2 - Remover Caixa");
-                        Console.WriteLine("3 - Lista de Caixa");
+                        Console.WriteLine("3 - Editar Caixa");
+                        Console.WriteLine("4 - Lista de Caixa");
                         Console.WriteLine("0 - Voltar");
 
                         int opcaoCaixa = int.Parse(Console.ReadLine());
@@ -185,13 +213,30 @@ namespace ClubeDaLeitura.ConsoleApp
                                 break;
 
                             case 2:
+                                Console.WriteLine("Insira o ID da Caixa que você quer excluir");
+                                int id = int.Parse(Console.ReadLine());
+                                repositorioCaixa.ExcluirCaixa(id);
+                                Console.ReadKey();
 
                                 break;
 
                             case 3:
+                                Console.WriteLine("Insira o Id da Caixa que você quer editar");
+                                int idi = int.Parse(Console.ReadLine());
+                                repositorioCaixa.EditarCaixa(idi);
+                                Console.ReadKey();
+
 
                                 break;
 
+                            case 4:
+                                TelaCaixa telaCaixa = new TelaCaixa();
+                                telaCaixa.repositorio = repositorioCaixa;
+                                telaCaixa.MostrarCaixas();
+
+
+                                Console.ReadKey();
+                                break;
                            
 
                             case 0:

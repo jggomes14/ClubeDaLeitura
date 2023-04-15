@@ -10,11 +10,19 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloCaixa
         {
             ArrayList caixas = repositorio.SelecionarTodos();
 
-            foreach (Caixa caixa in caixas)
+            if (caixas.Count == 0)
             {
-                Console.WriteLine(caixa.id + ", "
-                    + caixa.cor + ", " + caixa.etiqueta);
+                Console.WriteLine("Não existem caixas cadastradas.");
+            }
+            else
+            {
+                foreach (Caixa caixa in caixas)
+                {
+                    Console.WriteLine(caixa.id + ", "
+                        + caixa.cor + ", " + caixa.etiqueta);
+                }
             }
         }
+
     }
 }
