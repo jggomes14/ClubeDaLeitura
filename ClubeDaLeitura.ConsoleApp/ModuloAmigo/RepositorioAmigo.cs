@@ -66,6 +66,22 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloAmigo
                 Console.WriteLine("Amigo não encontrado!");
             }
         }
+        public Amigo SelecionarPorNome(string nome)
+        {
+            Amigo amigo = null;
+
+            foreach (Amigo a in listaRegistros)
+            {
+                if (a.nome.ToLower() == nome.ToLower())
+                {
+                    amigo = a;
+                    break;
+                }
+            }
+
+            return amigo;
+        }
+
 
 
 

@@ -5,6 +5,7 @@ namespace ClubeDaLeitura.ConsoleApp
 {
     public class Emprestimo
      {
+            public int id;
             public Amigo amigo;
             public Revista revista;
             public string dataDeEmprestimo;

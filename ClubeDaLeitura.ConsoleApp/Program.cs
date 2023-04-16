@@ -151,8 +151,8 @@ namespace ClubeDaLeitura.ConsoleApp
                         Console.WriteLine("╠══════════════════════════════════╣");
                         Console.WriteLine("║ 1. Cadastrar amigo               ║");
                         Console.WriteLine("║ 2. Remover amigo                 ║");
-                        Console.WriteLine("║ 3. Consultar amigo               ║");
-                        Console.WriteLine("║ 4. Editar amigo                  ║");
+                        Console.WriteLine("║ 3. Editar Amigo                  ║");
+                        Console.WriteLine("║ 4. Consultar amigo               ║");
                         Console.WriteLine("║ 0. Voltar ao menu principal      ║");
                         Console.WriteLine("╚══════════════════════════════════╝");
                         Console.Write("Digite a opção desejada: ");
@@ -297,18 +297,51 @@ namespace ClubeDaLeitura.ConsoleApp
                         switch (opcaoEmprestimo)
                         {
                             case 1:
+                                Emprestimo emprestimo = new Emprestimo();
+                                Console.WriteLine("Cadastre o id do Empréstimo:");
+                                emprestimo.id = int.Parse(Console.ReadLine());
+                                Console.WriteLine("Pra qual amigo você vai emprestar a revista?");
+                                string nomeSelecionado = Console.ReadLine();
+                                emprestimo.amigo = repositorioAmigo.SelecionarPorNome(nomeSelecionado);
+                                Console.WriteLine("Insira o Id da revista emprestada:");
+                                int id = int.Parse(Console.ReadLine());
+                                emprestimo.revista = repositorioRevista.SelecionarPorId(id);
+                                Console.WriteLine("Qual a Data que o Empréstimo foi feito?");
+                                emprestimo.dataDeEmprestimo = Console.ReadLine();
+                                repositorioEmprestimo.Inserir(emprestimo);
+                                
+                               
                                 break;
 
                             case 2:
+                                Console.WriteLine("Insira o ID do Empréstimo que você quer remover:");
+                                int idi = int.Parse(Console.ReadLine());
+                                repositorioEmprestimo.RemoverEmprestimo(idi);
+                                Console.ReadKey();
+
 
                                 break;
 
                             case 3:
+                                TelaEmprestimo telaEmprestimo = new TelaEmprestimo();
+                                telaEmprestimo.repositorio = repositorioEmprestimo;
+                                telaEmprestimo.MostrarEmprestimos();
+                                Console.ReadKey();
+
                                 break;
 
                             case 4:
+                                Console.WriteLine("Insira o ID do Empréstimo que você quer devolver:");
+                                int IDI = int.Parse(Console.ReadLine());
+                                repositorioEmprestimo.DevolverEmprestimo(IDI);
+                                Console.ReadKey();
+
                                 break;
                             case 5:
+                                Console.WriteLine("Insira o Id do Empréstimo que você quer editar");
+                                int ID = int.Parse(Console.ReadLine());
+                                repositorioEmprestimo.EditarEmprestimo(ID);
+                                Console.ReadKey();
                                 break;
 
                             case 0:
