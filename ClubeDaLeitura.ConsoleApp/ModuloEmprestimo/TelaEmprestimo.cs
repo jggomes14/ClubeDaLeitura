@@ -9,11 +9,37 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloEmprestimo
         public void MostrarEmprestimos()
         {
             ArrayList emprestimos = repositorio.SelecionarTodos();
-            foreach (Emprestimo e in emprestimos)
-            {
-                Console.WriteLine($"{e.revista.titulo}, {e.amigo.nome}, {e.dataDeEmprestimo}, {e.dataDeDevolucao}");
-            }
 
+            if (emprestimos.Count == 0)
+            {
+                Console.WriteLine("Não existem empréstimos cadastrados.");
+            }
+            else
+            {
+                
+                Console.WriteLine("Título da Revista\tNome do Amigo\tData de Empréstimo\tStatus");
+
+                
+                Console.WriteLine("===================================================================================");
+
+                
+                foreach (Emprestimo e in emprestimos)
+                {
+                    string status;
+                    if (e.dataDeDevolucao == null)
+                    {
+                        status = "Não devolvido";
+                    }
+                    else
+                    {
+                        status = "Devolvido";
+                    }
+
+                    Console.WriteLine("{0}\t{1}\t{2}\t{3}", e.revista.titulo, e.amigo.nome, e.dataDeEmprestimo, status);
+                }
+            }
         }
+
+
     }
 }

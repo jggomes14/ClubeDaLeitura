@@ -16,13 +16,20 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloCaixa
             }
             else
             {
+                
+                Console.WriteLine("ID\tCor\tEtiqueta");
+
+                
+                Console.WriteLine("===========================");
+
+                // Dados das caixas
                 foreach (Caixa caixa in caixas)
                 {
-                    Console.WriteLine(caixa.id + ", "
-                        + caixa.cor + ", " + caixa.etiqueta);
+                    Console.WriteLine("{0}\t{1}\t{2}", caixa.id, caixa.cor, caixa.etiqueta);
                 }
             }
         }
+
 
     }
 }

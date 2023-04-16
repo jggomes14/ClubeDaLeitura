@@ -33,9 +33,9 @@ namespace ClubeDaLeitura.ConsoleApp
         {
             RepositorioRevista repositorioRevista = new RepositorioRevista();
             RepositorioCaixa repositorioCaixa = new RepositorioCaixa();
-            RepositorioAmigo repositorioAmigo = new RepositorioAmigo(); 
+            RepositorioAmigo repositorioAmigo = new RepositorioAmigo();
             RepositorioEmprestimo repositorioEmprestimo = new RepositorioEmprestimo();
-            
+
             int opcao;
             do
             {
@@ -96,7 +96,7 @@ namespace ClubeDaLeitura.ConsoleApp
                                 int opcaodeselecao = int.Parse(Console.ReadLine());
                                 revista.caixa = repositorioCaixa.SelecionarPorId(opcaodeselecao);
 
-                               
+
 
                                 repositorioRevista.Inserir(revista);
 
@@ -263,7 +263,7 @@ namespace ClubeDaLeitura.ConsoleApp
 
                                 Console.ReadKey();
                                 break;
-                           
+
 
                             case 0:
                                 Console.WriteLine("Voltando ao Menu Principal");
@@ -309,8 +309,8 @@ namespace ClubeDaLeitura.ConsoleApp
                                 Console.WriteLine("Qual a Data que o Empréstimo foi feito?");
                                 emprestimo.dataDeEmprestimo = Console.ReadLine();
                                 repositorioEmprestimo.Inserir(emprestimo);
-                                
-                               
+
+
                                 break;
 
                             case 2:
